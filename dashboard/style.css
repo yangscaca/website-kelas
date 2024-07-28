@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #111222;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 100px;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 4em;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(20px); /* Posisi awal dari bawah */
+    transition: opacity 0.6s ease-out, transform 1s ease-out;
+}
+
+.main-title.visible {
+    opacity: 1;
+    transform: translateY(0); /* Posisi akhir */
+}
+
+.content {
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .image {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content .image img {
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .text-box {
+    z-index: 222;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-80px, 50px);
+}
+
+.content .text-box h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.media-icons {
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.media-icons a {
+    color: #fff;
+    font-size: 2em;
+    margin: 60px;
+}
+
+/* Tambahkan gaya untuk media-icons1 */
+.media-icons1 {
+    opacity: 0;
+    transform: translateX(-20px); /* Posisi awal dari kiri */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.media-icons1.visible {
+    opacity: 1;
+    transform: translateX(0); /* Posisi akhir */
+}
+
+/* Tambahkan gaya untuk media-info */
+.media-info {
+    opacity: 0;
+    transform: translateY(20px); /* Posisi awal dari bawah */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.media-info.visible {
+    opacity: 1;
+    transform: translateY(0); /* Posisi akhir */
+}
+
+.section-title {
+    font-size: 3em;
+    margin-bottom: 80px;
+}
+
+.info-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.info {
+    width: 700px;
+    margin-left: 50px;
+}
+
+.media-info {
+    width: 400px;
+    margin-left: 50px;
+}
+
+.media-info li {
+    list-style: none;
+    font-size: 1.4em;
+}
+
+.media-info li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.media-info li:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+/* Animasi untuk gambar fade-in dari kiri */
+.image1,
+.image2 {
+    opacity: 0;
+    transform: translateX(-20px); /* Posisi awal dari kiri */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.image1.visible,
+.image2.visible {
+    opacity: 1;
+    transform: translateX(0); /* Posisi akhir */
+}
+
+/* Animasi untuk gambar fade-in dari kanan */
+.image3 {
+    opacity: 0;
+    transform: translateX(20px); /* Posisi awal dari kanan */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.image3.visible {
+    opacity: 1;
+    transform: translateX(0); /* Posisi akhir */
+}
